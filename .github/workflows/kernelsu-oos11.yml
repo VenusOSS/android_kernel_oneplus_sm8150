@@ -48,10 +48,7 @@ jobs:
       id: get_version
       run: |
         rm -rf KernelSU
-        git clone https://github.com/KernelSU-Next/KernelSU-Next -b next KernelSU
-        cd KernelSU
-        git checkout c8ee46d851c1c00beb50246b718a2bf8ebf83694
-        cd ..
+        git clone https://github.com/KernelSU-Next/KernelSU-Next -b dev KernelSU
     - name: Build Kernel
       run: |
        export PATH=$(pwd)/clang/bin/:$(pwd)/aarch64/bin/:$PATH
